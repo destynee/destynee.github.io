@@ -1,4 +1,7 @@
-### Hi there 👋
+<h1 align="center">Hello 👋, I'm Destynee!</h1>
+<h3 align="center">Undergraduate student at UC San Diego studying Cognitive Science with an emphasis in Machine Learning.</h3>
+
+<!-- ### Hi there 👋 -->
 
 <!--
 **destynee/destynee** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
