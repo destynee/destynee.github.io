@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destynee | AI & HCI Portfolio</title>
     
+    <!-- Favicon (Updated path to assets folder) -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    
     <!-- Tailwind CSS (CDN for immediate use) -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -17,6 +20,16 @@
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'flow': 'flow 3s linear infinite',
+                    },
+                    keyframes: {
+                        flow: {
+                            '0%': { strokeDashoffset: '100' },
+                            '100%': { strokeDashoffset: '0' },
+                        }
+                    }
                 }
             }
         }
@@ -25,8 +38,8 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Lucide Icons (Fixed Source for Browser) -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
     <style>
         /* Custom Scrollbar */
@@ -73,7 +86,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <button id="theme-toggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-900 transition-colors" aria-label="Toggle theme">
+                <button id="theme-toggle" class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 dark:text-slate-400 dark:hover:bg-slate-900 transition-colors cursor-pointer" aria-label="Toggle theme">
                     <i data-lucide="moon" class="block dark:hidden w-5 h-5"></i>
                     <i data-lucide="sun" class="hidden dark:block w-5 h-5"></i>
                 </button>
@@ -174,16 +187,15 @@
                         </a>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                        Cognitive Model Simulation
+                        Evaluating LLMs for Bias
                     </h3>
                     <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
-                        A neural network visualizer that demonstrates how human attention mechanisms can be modeled in software. Built using Python and TensorFlow, featuring a React frontend for real-time interaction.
+                        Designed and executed a reproducible experiment for evaluating large language models for gender bias in occupational contexts through prompt engineering. Implemented surprisal metrics to quantify model behavior.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Python</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">TensorFlow</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">React</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">HCI</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">PyTorch</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Transformers</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Bias Probing</span>
                     </div>
                 </div>
 
@@ -191,47 +203,26 @@
                 <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-700 flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
-                            <i data-lucide="code-2" class="w-6 h-6"></i>
+                            <i data-lucide="activity" class="w-6 h-6"></i>
                         </div>
                         <a href="https://github.com/destynee" target="_blank" class="opacity-0 group-hover:opacity-100 transition-opacity p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
                             <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-500 dark:text-slate-400"></i>
                         </a>
                     </div>
                     <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                        AI Chatbot Interface
+                        Global Health Trends Analysis
                     </h3>
                     <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
-                        An experimental chat interface focusing on natural conversation flow and sentiment analysis to adapt UI colors based on user mood.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mt-auto">
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">OpenAI API</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Node.js</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-700 flex flex-col h-full">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
-                            <i data-lucide="code-2" class="w-6 h-6"></i>
-                        </div>
-                        <a href="https://github.com/destynee" target="_blank" class="opacity-0 group-hover:opacity-100 transition-opacity p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full">
-                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-slate-500 dark:text-slate-400"></i>
-                        </a>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
-                        Data Analysis Pipeline
-                    </h3>
-                    <p class="text-slate-600 dark:text-slate-400 mb-6 flex-grow leading-relaxed">
-                        Automated pipeline for processing CogSci research data. Cleans, normalizes, and visualizes large datasets automatically.
+                        Developed Python code to clean and merge multi-country health datasets. Applied statistical analysis (OLS Regression, ANOVA) to health indicators, revealing correlations between funding and life expectancy.
                     </p>
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Pandas</span>
-                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Python</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">NumPy</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Matplotlib</span>
                     </div>
                 </div>
 
-                <!-- Project 4 (Portfolio) -->
+                <!-- Project 3 (Portfolio) -->
                 <div class="group bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:border-slate-300 dark:hover:border-slate-700 flex flex-col h-full">
                     <div class="flex justify-between items-start mb-4">
                         <div class="p-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400">
@@ -250,6 +241,7 @@
                     <div class="flex flex-wrap gap-2 mt-auto">
                         <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">HTML5</span>
                         <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Tailwind</span>
+                        <span class="px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">Lucide</span>
                     </div>
                 </div>
 
